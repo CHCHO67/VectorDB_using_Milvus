@@ -221,9 +221,3 @@ response = openai_client.chat.completions.create(
     ],
 )
 print(response.choices[0].message.content)
-# %%
-res = mv_test.describe_collection()
-
-print(res)
-
-# %%
