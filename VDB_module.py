@@ -195,6 +195,7 @@ def main():
     # 이 context 변수는 이후의 프롬프트에서 검색된 문맥 정보로 사용.
     context = "\n".join([res[0] for res in results])
     
+    
     # 프롬프트 입력받을 수 있도록 변경 필요
     SYSTEM_PROMPT = "Human: You are an AI assistant. You are able to find answers to the questions from the contextual passage snippets provided."
     USER_PROMPT = "Use the following pieces of information enclosed in <context> tags to provide an answer to the question enclosed in <question> tags.\n<context>\n{context}\n</context>\n<question>\n{question}\n</question>"
