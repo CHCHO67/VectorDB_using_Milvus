@@ -7,10 +7,11 @@ from dotenv import load_dotenv, find_dotenv
 from pymilvus import connections, utility, FieldSchema, CollectionSchema, DataType, Collection
 from openai import OpenAI
 
+'''
+Embedding
+'''
 class Milvus_Embedding:
     def __init__(self, openai_api_key, collection_name, milvus_host='localhost', milvus_port='19530'):
-        #self.openai_api_key = openai_api_key
-        #OpenAI.api_key = self.openai_api_key
         self.collection_name = collection_name
         self.openai_client = OpenAI(api_key=openai_api_key)
         self.connect_milvus(milvus_host, milvus_port)
